@@ -1,0 +1,11 @@
+- name: install certbot
+  tags: letsencrypt
+  apt:
+    pkg:
+      - certbot
+      - python3-certbot-nginx
+  when: not letsencrypt_cert.stat.exists
+  
+- name: generate certificate
+  command: certbot certonly -d {{ domain }} --nginx --non-interactive --agree-tos -m {{ email }}
+  when: not letsencrypt_cert.stat.exists
