@@ -1,4 +1,9 @@
 ---
+- name: install unzip
+  apt:
+    name:
+      - unzip
+      
 - name: Remove existing install source dir
   file: "path={{ odbc_src_dir }} state=absent"
 
