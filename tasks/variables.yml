@@ -14,9 +14,3 @@
 - name: Check Alembic Installation
   stat: "path={{ alembic_path }}/config.ini"
   register: alembic_config
-
-- name: Check Lets Encrypt certificate
-  tags: letsencrypt
-  stat:
-    path: /etc/letsencrypt/live/{{ domain }}/cert.pem
-  register: letsencrypt_cert

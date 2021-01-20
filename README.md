@@ -1,6 +1,6 @@
 # Ansible Role: Asterisk
 
-[![Build Status](https://travis-ci.com/Nickmasff/ansible-role-asterisk.svg?branch=master)](https://travis-ci.com/Nickmasff/ansible-role-asterisk)
+[![Build Status](https://travis-ci.com/milad00ahmadi/ansible-role-asterisk.svg?branch=master)](https://travis-ci.com/Nickmasff/ansible-role-asterisk)
 
 Installs and configures MySQL and Asterisk with ODBC realtime database driver.
 
@@ -12,7 +12,7 @@ No special requirements; note that this role requires root access, so either run
 
     - hosts: asterisk_machines
       roles:
-        - role: nickmasff.asterisk
+        - role: milad00ahmadi.asterisk
           become: yes
 
 Install via ansible-galaxy
@@ -58,6 +58,8 @@ None.
 MIT / BSD
 
 ## Author Information
+
+Most of the work is done by Nickmasff, I just upgrade some packages
 
 Nickmasff
 nickmasff@yandex.ru

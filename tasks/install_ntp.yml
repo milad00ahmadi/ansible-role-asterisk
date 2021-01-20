@@ -4,14 +4,17 @@
     name:
       - ntp
       - ntpdate
+    update_cache: yes
 
 - name: stop time service
+  ignore_errors: yes
   service:
     name: systemd-timesyncd
     state: stopped
     enabled: no
 
 - name: Ensure NTP is running
+  ignore_errors: true
   service:
     name: ntp
     state: started
