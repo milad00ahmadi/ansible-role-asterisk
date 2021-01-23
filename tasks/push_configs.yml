@@ -33,11 +33,12 @@
     mode: 0775
 
 - name: create asterisk tmp.d rule
-  src: tmp.d.j2
-  dest: /etc/tmpfiles.d/asterisk.confe
-  group: root
-  owner: root
-  mode: 0644
+  template:
+    src: tmp.d.j2
+    dest: /etc/tmpfiles.d/asterisk.confe
+    group: root
+    owner: root
+    mode: 0644
 
 - name: Make sure everything is owned by asterisk user
   file:
