@@ -1,7 +1,7 @@
 ---
 # MySQL settings.
 
-mysql_user: user
+mysql_user: asterisk
 mysql_password: password
 mysql_database: asterisk
 mysql_priv: "asterisk.*:ALL"
@@ -20,7 +20,7 @@ asterisk_group: asterisk
 
 asterisk_odbc_driver_path: /usr/lib/x86_64-linux-gnu/odbc/libmyodbc8w.so
 asterisk_src_dir: /usr/src/iasterisk/
-asterisk_version: 15
+asterisk_version: 18
 odbc_src_url: https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc-8.0.12-linux-ubuntu18.04-x86-64bit.tar.gz
 odbc_src_dir: /usr/src/iodbc/
 alembic_path: /usr/src/iasterisk/contrib/ast-db-manage
