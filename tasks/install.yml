@@ -51,7 +51,7 @@
   tags: skip_ansible_lint
 
 - name: Configure asterisk
-  command: ./configure --with-pjproject-bundled chdir={{ asterisk_src_dir }}
+  command: ./configure --with-jansson-bundled chdir={{ asterisk_src_dir }}
   when: not asterisk_status.stat.exists
 
 - name: Create menuselect.makeopts
@@ -63,12 +63,15 @@
   with_items:
     - 'menuselect/menuselect --enable format_mp3'
     - 'menuselect/menuselect --enable codec_opus'
-    - 'menuselect/menuselect --enable CORE-SOUNDS-EN-WAV
-    --enable CORE-SOUNDS-EN-G722'
-    - 'menuselect/menuselect  --enable EXTRA-SOUNDS-EN-GSM
-    --enable EXTRA-SOUNDS-EN-WAV --enable EXTRA-SOUNDS-EN-G722'
-    - 'menuselect/menuselect --enable app_statsd
-    --enable chan_pjsip menuselect.makeopts'
+    - 'menuselect/menuselect --enable codec_siren7'
+    - 'menuselect/menuselect --enable codec_siren14'
+    - 'menuselect/menuselect --disable CORE-SOUNDS-EN-GSM'
+    - 'menuselect/menuselect --enable CORE-SOUNDS-EN-WAV'
+    - 'menuselect/menuselect --enable CORE-SOUNDS-EN-G722'
+    - 'menuselect/menuselect  --enable EXTRA-SOUNDS-EN-GSM'
+    - 'menuselect/menuselect --enable EXTRA-SOUNDS-EN-WAV'
+    - 'menuselect/menuselect --enable EXTRA-SOUNDS-EN-G722'
+    
   when: not asterisk_status.stat.exists
 
 - name: Make

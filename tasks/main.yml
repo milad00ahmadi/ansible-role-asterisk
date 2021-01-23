@@ -18,4 +18,5 @@
 - include_tasks: install_alembic.yml
   when: not alembic_config.stat.exists
 
-- include_tasks: push_configs.yml
+- name: push configs
+  include_tasks: push_configs.yml
