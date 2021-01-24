@@ -1,6 +1,6 @@
 # Ansible Role: Asterisk
 
-[![Build Status](https://travis-ci.com/milad00ahmadi/ansible-role-asterisk.svg?branch=master)](https://travis-ci.com/Nickmasff/ansible-role-asterisk)
+[![Build Status](https://travis-ci.com/milad00ahmadi/ansible-role-asterisk.svg?branch=master)](https://travis-ci.com/milad00ahmadi/ansible-role-asterisk)
 
 Installs and configures MySQL and Asterisk with ODBC realtime database driver.
 
@@ -20,7 +20,7 @@ Install via ansible-galaxy
 
 Use ansible galaxy to download this role with:
 
-    ansible-galaxy install nickmasff.asterisk
+    ansible-galaxy install milad00ahmadi.asterisk
 
 
 ## Dependencies
@@ -34,7 +34,7 @@ None.
       vars_files:
         - variables.yml
       roles:
-        - { role: nickmasff.asterisk }
+        - { role: milad00ahmadi.asterisk }
         
 
 *Inside `variables.yml`*:
@@ -51,16 +51,7 @@ None.
     asterisk_config_path: ../../../files/asterisk/
     
     
-    
-
+  
 ## License
 
 MIT / BSD
-
-## Author Information
-
-Most of the work is done by Nickmasff, I just upgrade some packages
-
-Nickmasff
-nickmasff@yandex.ru
-
