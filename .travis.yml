@@ -5,6 +5,7 @@ services:
   - docker
 
 install:
+  - pip3 install ansible
   # Install test dependencies.
   - pip3 install molecule molecule-docker
 
