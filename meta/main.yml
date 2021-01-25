@@ -4,7 +4,7 @@ dependencies: []
 galaxy_info:
   author: milad
   role_name: asterisk
-  description: Installs Asterisk from source on Ubuntu 20.
+  description: Installs Asterisk from source on Ubuntu 20.04
   license: "license (BSD, MIT)"
   min_ansible_version: 2.9
   platforms:

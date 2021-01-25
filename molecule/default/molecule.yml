@@ -13,6 +13,7 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     capabilities:
       - SYS_ADMIN
+      - NET_ADMIN
     command: "/lib/systemd/systemd"
     pre_build_image: true
 
