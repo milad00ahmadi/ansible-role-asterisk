@@ -6,7 +6,7 @@ services:
 
 install:
   # Install test dependencies.
-  - pip3 install molecule docker
+  - pip3 install molecule molecule-docker
 
 before_script:
   # Use actual Ansible Galaxy role name for the project directory.
