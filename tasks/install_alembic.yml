@@ -1,6 +1,9 @@
 ---
 - name: Install alembic
-  shell: pip3 install --upgrade setuptools && pip3 install alembic && pip3 install mysqlclient
+  shell: >
+    pip3 install --upgrade setuptools &&
+    pip3 install alembic &&
+    pip3 install mysqlclient
   when: not alembic_config.stat.exists
   tags: skip_ansible_lint
 

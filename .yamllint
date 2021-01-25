@@ -1,5 +1,9 @@
 ---
 extends: default
+
+ignore: |
+  defaults/main.yml
+
 rules:
   line-length:
     max: 150

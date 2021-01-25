@@ -7,14 +7,13 @@
 
 - name: Install mysql community client plugins
   apt:
-    deb: {{ mysql_community_plugins_deb_package_url }}
-    update_cache: yes
-    
-- name: Install ODBC
-  apt:
-    deb: {{ odbc_deb_package_url }}
+    deb: "{{ mysql_community_plugins_deb_package_url }}"
     update_cache: yes
 
+- name: Install ODBC
+  apt:
+    deb: "{{ odbc_deb_package_url }}"
+    update_cache: yes
 
 - name: Make sure asterisk_odbc_driver_path is owned by root
   file:
