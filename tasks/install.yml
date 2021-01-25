@@ -105,7 +105,9 @@
     comment: "Asterisk User"
 
 
+  # Ignore ufw errors while testing
 - name: tweak the ufw firewall for UDP/SIP
+  ignore_errors: yes
   ufw:
     rule: allow
     port: 5060
@@ -113,6 +115,7 @@
 
 
 - name: tweak the ufw firewall for UDP/RTP
+  ignore_errors: yes
   ufw:
     rule: allow
     port: 10000:20000

@@ -1,19 +1,18 @@
 ---
-# MySQL settings.
 
-mysql_user: asterisk
-mysql_password: password
-mysql_database: asterisk
-mysql_priv: "asterisk.*:ALL"
+mysql_asterisk_user: asterisk
+mysql_asterisk_user_password: password
+mysql_asterisk_database: asterisk
+mysql_asterisk_user_priv: "asterisk.*:ALL"
 mysql_host: "localhost"
-mysql_root_pass: password
+mysql_root_password: password
 
 mysql_bind_address: 0.0.0.0
 mysql_socket: /run/mysqld/mysqld.sock
 
 # Asterisk
 
-asterisk_username: asterisk
+asterisk_user: asterisk
 asterisk_group: asterisk
 
 # Other settings.

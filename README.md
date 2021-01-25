@@ -39,13 +39,13 @@ None.
 
 *Inside `variables.yml`*:
         
-    mysql_user: user
-    mysql_password: password
-    mysql_database: asterisk
-    mysql_priv: "asterisk.*:ALL"
-    mysql_root_pass: password
+    mysql_asterisk_user: user
+    mysql_asterisk_user_password: password
+    mysql_asterisk_database: asterisk
+    mysql_asterisk_user_priv: "asterisk.*:ALL"
+    mysql_root_password: password
     
-    asterisk_username: asterisk
+    asterisk_user: asterisk
     asterisk_group: asterisk
     
     asterisk_config_path: ../../../files/asterisk/

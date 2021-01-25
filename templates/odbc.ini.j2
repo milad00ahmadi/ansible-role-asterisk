@@ -3,10 +3,10 @@
 [MySQL-asterisk]
 Description           = MySQL connection to  database
 Driver                = MySQL
-Database              = {{ mysql_database }}
+Database              = {{ mysql_asterisk_database }}
 Server                = localhost
-User                  = {{ mysql_user }}
-Password              = {{ mysql_password }}
+User                  = {{ mysql_asterisk_user }}
+Password              = {{ mysql_asterisk_user_password }}
 Port                  = 3306
 Socket                = {{mysql_socket}}
 
