@@ -9,12 +9,6 @@ install:
   # Install test dependencies.
   - pip3 install molecule molecule-docker
 
-before_script:
-  # Use actual Ansible Galaxy role name for the project directory.
-  - cd ../
-  - mv ansible-role-asterisk milad00ahmadi.asterisk
-  - cd milad00ahmadi.asterisk
-
 script:
   # Run tests.
   - molecule test
