@@ -1,4 +1,7 @@
 ---
+- name: Check For Updates
+  include_tasks: install_updates.yml
+
 - name: Variables
   include_tasks: variables.yml
 

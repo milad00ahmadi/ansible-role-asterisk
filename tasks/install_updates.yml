@@ -1,0 +1,13 @@
+---
+- name: Upgade ubuntu packages
+  apt:
+    upgrade: dist
+
+- name: Check if reboot is required
+  stat:
+    path: /var/run/reboot-required
+  register: reboot_required_file
+
+- name: Reboot server
+  reboot:
+  when: reboot_required_file.stat.exists
