@@ -3,7 +3,7 @@
   copy:
     src: "{{ asterisk_config_path }}"
     dest: /etc/asterisk//
-    owner: "{{ asterisk_username }}"
+    owner: "{{ asterisk_user }}"
     group: "{{ asterisk_group }}"
     mode: 0644
   when: asterisk_config_path is defined
@@ -28,7 +28,7 @@
   template:
     src: res_odbc.conf.j2
     dest: /etc/asterisk/res_odbc.conf
-    owner: "{{ asterisk_username }}"
+    owner: "{{ asterisk_user }}"
     group: root
     mode: 0775
 
@@ -43,7 +43,7 @@
 - name: Make sure everything is owned by asterisk user
   file:
     path: "{{ item }}"
-    owner: "{{ asterisk_username }}"
+    owner: "{{ asterisk_user }}"
     group: root
     recurse: true
     mode: 0775

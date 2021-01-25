@@ -100,7 +100,7 @@
 
 - name: Add Asterisk user
   user:
-    name: "{{ asterisk_username }}"
+    name: "{{ asterisk_user }}"
     state: present
     comment: "Asterisk User"
 
