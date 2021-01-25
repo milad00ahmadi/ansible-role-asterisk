@@ -49,4 +49,3 @@
     priv: "{{ mysql_asterisk_user_priv }}"
     state: present
     login_unix_socket: "{{ mysql_socket }}"
-
