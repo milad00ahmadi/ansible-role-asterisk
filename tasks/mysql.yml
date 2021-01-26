@@ -23,15 +23,6 @@
     dest: /etc/mysql/mysql.conf.d/mysqld.cnf
     mode: 0600
 
-- name: Update MySQL root password for all root accounts
-  mysql_user: 'name=root host={{ item }} password={{ mysql_root_password }}
-  state=present login_unix_socket="{{ mysql_socket }}"'
-  with_items:
-    - "{{ ansible_hostname }}"
-    - 127.0.0.1
-    - ::1
-    - localhost
-
 - name: Disallow root login remotely
   command: 'mysql -NBe "{{ item }}"'
   with_items:
@@ -48,7 +39,6 @@
   changed_when: false
   check_mode: false
 
-# Set root password for MySQL >= 5.7.x.
 - name: Update MySQL root password for localhost root account
   shell: >
     mysql -u root -NBe
