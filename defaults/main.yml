@@ -20,7 +20,7 @@ asterisk_group: asterisk
 asterisk_odbc_driver_path: /usr/lib/x86_64-linux-gnu/odbc/libmyodbc8w.so
 asterisk_src_dir: /usr/src/iasterisk/
 asterisk_version: 18
-mysql_community_plugins_deb_package_url: ://repo.mysql.com/apt/ubuntu/pool/mysql-8.0/m/mysql-community/mysql-community-client-plugins-dbgsym_8.0.23-1ubuntu20.04_amd64.deb
-odbc_deb_package_url: ://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc_8.0.23-1ubuntu20.04_amd64.deb
+mysql_community_plugins_deb_package_url: https://repo.mysql.com/apt/ubuntu/pool/mysql-8.0/m/mysql-community/mysql-community-client-plugins-dbgsym_8.0.23-1ubuntu20.04_amd64.deb
+odbc_deb_package_url: https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc_8.0.23-1ubuntu20.04_amd64.deb
 odbc_src_dir: /usr/src/iodbc/
 alembic_path: /usr/src/iasterisk/contrib/ast-db-manage
