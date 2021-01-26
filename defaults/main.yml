@@ -1,5 +1,6 @@
 ---
 
+# MySQL 
 mysql_asterisk_user: asterisk
 mysql_asterisk_user_password: password
 mysql_asterisk_database: asterisk
