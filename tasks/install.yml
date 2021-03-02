@@ -58,7 +58,7 @@
   when: not asterisk_status.stat.exists
 
 - name: Create menuselect.makeopts
-  command: make menuselect.makeopts chdir={{ asterisk_src_dir }}
+  command: make menuselect chdir={{ asterisk_src_dir }}
   when: not asterisk_status.stat.exists
 
 - name: Do a bit of menuselect configuration
@@ -69,6 +69,7 @@
     - 'menuselect/menuselect --enable codec_siren7'
     - 'menuselect/menuselect --enable codec_siren14'
     - 'menuselect/menuselect --disable CORE-SOUNDS-EN-GSM'
+    - 'menuselect/menuselect --disable cdr_radius'
     - 'menuselect/menuselect --enable CORE-SOUNDS-EN-WAV'
     - 'menuselect/menuselect --enable CORE-SOUNDS-EN-G722'
     - 'menuselect/menuselect  --enable EXTRA-SOUNDS-EN-GSM'
