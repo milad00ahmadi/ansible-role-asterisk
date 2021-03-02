@@ -25,3 +25,17 @@ mysql_community_plugins_deb_package_url: https://repo.mysql.com/apt/ubuntu/pool/
 odbc_deb_package_url: https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc_8.0.23-1ubuntu20.04_amd64.deb
 odbc_src_dir: /usr/src/iodbc/
 alembic_path: /usr/src/iasterisk/contrib/ast-db-manage
+
+
+menuselect:
+   - 'menuselect/menuselect --enable format_mp3'   
+   - 'menuselect/menuselect --enable codec_opus'
+   - 'menuselect/menuselect --enable codec_siren7'
+   - 'menuselect/menuselect --enable codec_siren14'
+   - 'menuselect/menuselect --disable CORE-SOUNDS-EN-GSM'
+   - 'menuselect/menuselect --disable cdr_radius'
+   - 'menuselect/menuselect --enable CORE-SOUNDS-EN-WAV'
+   - 'menuselect/menuselect --enable CORE-SOUNDS-EN-G722'
+   - 'menuselect/menuselect  --enable EXTRA-SOUNDS-EN-GSM'
+   - 'menuselect/menuselect --enable EXTRA-SOUNDS-EN-WAV'
+   - 'menuselect/menuselect --enable EXTRA-SOUNDS-EN-G722'

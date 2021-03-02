@@ -63,18 +63,7 @@
 
 - name: Do a bit of menuselect configuration
   command: "{{ item }} chdir={{ asterisk_src_dir }}"
-  with_items:
-    - 'menuselect/menuselect --enable format_mp3'
-    - 'menuselect/menuselect --enable codec_opus'
-    - 'menuselect/menuselect --enable codec_siren7'
-    - 'menuselect/menuselect --enable codec_siren14'
-    - 'menuselect/menuselect --disable CORE-SOUNDS-EN-GSM'
-    - 'menuselect/menuselect --disable cdr_radius'
-    - 'menuselect/menuselect --enable CORE-SOUNDS-EN-WAV'
-    - 'menuselect/menuselect --enable CORE-SOUNDS-EN-G722'
-    - 'menuselect/menuselect  --enable EXTRA-SOUNDS-EN-GSM'
-    - 'menuselect/menuselect --enable EXTRA-SOUNDS-EN-WAV'
-    - 'menuselect/menuselect --enable EXTRA-SOUNDS-EN-G722'
+  loop: "{{ menuselect }}"
 
   when: not asterisk_status.stat.exists
 
