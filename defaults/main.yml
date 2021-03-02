@@ -26,7 +26,6 @@ odbc_deb_package_url: https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mys
 odbc_src_dir: /usr/src/iodbc/
 alembic_path: /usr/src/iasterisk/contrib/ast-db-manage
 
-
 menuselect:
    - 'menuselect/menuselect --enable format_mp3'   
    - 'menuselect/menuselect --enable codec_opus'
