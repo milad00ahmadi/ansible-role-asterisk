@@ -58,13 +58,12 @@
   when: not asterisk_status.stat.exists
 
 - name: Create menuselect.makeopts
-  command: make menuselect chdir={{ asterisk_src_dir }}
+  command: make menuselect.makeopts chdir={{ asterisk_src_dir }}
   when: not asterisk_status.stat.exists
 
 - name: Do a bit of menuselect configuration
   command: "{{ item }} chdir={{ asterisk_src_dir }}"
   loop: "{{ menuselect }}"
-
   when: not asterisk_status.stat.exists
 
 - name: Make
